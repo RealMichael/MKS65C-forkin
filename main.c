@@ -37,11 +37,11 @@ int main(){
 	printf("Child PID- %d\n",getpid());
 	//int random = populate();
 	sleep(random);
-	printf("Child PID- %d  Slept for %d Seconds\n",getpid(),random);
+	printf("Child PID- %d done\n",getpid());
 	
 	}
 	
-    else if(Orig == getpid()){
+    if(Orig == getpid()){
 	int Orig2 = wait(&status);
 	printf("My son %d slept for %d seconds\n",Orig2,random);
 	printf("My turn to sleep\n");
